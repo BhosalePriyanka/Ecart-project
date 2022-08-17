@@ -1,40 +1,16 @@
 body{text-align: center;}
-/* Coding for Product Component */
-.products{width: 25rem;height: 35rem;border: 0.1rem inset black; background-color: floralwhite;margin-top:2rem;
-  padding-top: 2rem; text-align: center;}
-.products:hover{transform: scale(1.0);}
-img{width: 18rem;height:20rem;}
-img:hover{width: 21rem; height: 22.5rem;}
-.buynow{cursor: pointer;padding: .5rem;}
 
-/* Coding for Product Listing Component */
-.productListing{display: flex; flex-wrap: wrap; background-color: pink;justify-content: space-around;}
+/* Home */
+.home img{height: 380px;}
+.products{width: 20rem;height: auto; border: 0.1rem inset black;padding: 1rem; margin: 1rem;
+	border-radius: 5%;}
+.products img{width: 15rem;height:15rem;}
+form {background-color: white;}
+.footer{display: flex; flex-direction: column; min-height: 100vh;}
+.footerContent{}
 
+/* Responsive */
+@media (min-width: 768px) {  
+	.form-group {width:100%;}
+}
 
-/* Coding for Product Details Component  */
-
-.product{  display: block;justify-content: space-evenly; background-color: grey;width: 30rem;
-  text-align: center;height: fit-content;margin-left: auto;margin-right: auto;padding: 1rem;}
-.addtocart{padding: 1rem;margin-top: 5rem;}
-.product .title{font-size: 1.5rem;font-weight: bold;}
-.price{font-size: 1rem;padding: 1rem;}
-.discription{font-size: 1rem;padding: 1.5rem;}
-
-.delete , .minus , .plus {font-size: 2rem;margin-top: auto;margin-bottom: auto;color: black;}
-
-/* Coding for NavBar Component*/
- ul{ list-style: none;display: flex;justify-content: center;text-transform: uppercase;font-size: 1.5rem;padding: 1rem;}
- ul li {text-transform: uppercase;font-size: 1.3rem;padding: 1.5rem;}
- .navbar button{ padding:1rem;}
-.navbar{width: 95%;  height: 10rem;}
-.cart{width: 5%;height: 10rem;text-align: center;display: flex;justify-content: center;}
- .buttonCart{padding: .5rem;border-radius: 1rem;font-size: 1.5rem;}
- .header{width: 100%;height: 10rem;display: flex;justify-content: center;text-align: center;}
-
- /*Coding for Cart */
-
-.cartproduct{width: 30%;height: fit-content;border: .1rem solid black;text-align: center;margin-left: auto;margin-right: auto;}
-.amount{font-size: 1rem;padding: 1rem;}
-.cartproduct img{width: 8rem;height:10rem;}
-
-.cartname{display: flex;justify-content: center;}

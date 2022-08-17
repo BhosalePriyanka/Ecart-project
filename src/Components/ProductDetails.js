@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import {useDispatch , useSelector} from 'react-redux';
 import {useEffect} from 'react';
 import { memo } from "react";
-import {selectedProduct , removepriviousProduct , getAddItem} from '../Redux/Action/ProductAction';
+import {selectedProduct , getAddItem, removepriviousProduct} from '../Redux/Action/ProductAction';
 import './Main.css';
 import {Link} from 'react-router-dom';
 
@@ -18,37 +18,33 @@ dispatch(selectedProduct(jsonData));
 }
 useEffect(()=>{
 	 fetchSelectedProduct();
-	  return () =>{
+	 return () =>{
 	 	dispatch(removepriviousProduct());
 	 } 
 },[]);
 
-const getItem = useSelector(state => state.item);
-console.log(getItem);
 const product= useSelector(state => state.product);
 const {title, image, price,  description} = product;
 
 return(
 <>
-{Object.keys(product).length === 0 ? ( <h1>Loading....</h1> ) : 
+<div className = "container">
+{Object.keys(product).length === 0 ? ( <h1 className = "mt-5">Loading....  <div class="spinner-border"></div></h1> ) : 
 (
-	<div className="product">
-		<img src ={image} alt = {title}/>
-		<div className = "title">{title}</div>
-		<div className = "price"> <button> Price:${price} </button> </div>
-		<div className = "discription"> ${description}</div>
-		<button className="addtocart" onClick={() => dispatch(getAddItem(getItem))}> 
-		Add To Cart </button>
-<Link to = {`/Cart`}>
-		<button className="addtocart"> 
-		Go To Cart </button>
-</Link>
-	
+	<div className ="container">
+	<div className = "w-50 border border-dark mx-auto">
+		<img className = "pe-none w-25 h-25" src ={image} alt = {title}/>
+		<div className = "mt-5 fw-bold">{title}</div>
+		<div className = "pe-none mt-2"> <button> Price:${price} </button> </div>
+		<div> ${description}</div>
+		<button className="btn btn-primary mx-2 my-5" onClick={() => dispatch(getAddItem(product))}> Add To Cart </button>
+		<Link to = {`/Cart`}>
+		<button className = "btn btn-primary mx-2 my-5"> Go To Cart</button>
+		</Link>
 	</div>
-
+</div>
 )}
-
-
+</div>
 </>
 )
 }

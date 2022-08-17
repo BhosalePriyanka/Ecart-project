@@ -1,0 +1,183 @@
+{
+  "users": [
+    {
+      "id": 20,
+      "email": "priyanka@gmail.com",
+      "username": "priya",
+      "password": "priya123",
+      "name": {
+        "firstname": "priya",
+        "lastname": "bhosale"
+      },
+      "address": {
+        "city": "pune",
+        "street": "drive",
+        "number": 23,
+        "zipcode": "g689gr"
+      },
+      "phone": "07466157290"
+    },
+    {
+      "id": "5",
+      "email": "priyanka.patil@gmail.com",
+      "userName": "wersdfr",
+      "password": "wer234",
+      "name": {
+        "firstName": "sdfsdf",
+        "lastName": "sdf"
+      },
+      "address": {
+        "city": "sff",
+        "street": "sdf",
+        "number": "23",
+        "zipcode": "sff23",
+        "geolocation": {
+          "lat": "",
+          "long": ""
+        }
+      },
+      "phone": "23423423422"
+    },
+    {
+      "id": 21,
+      "email": "",
+      "userName": "",
+      "password": "",
+      "name": {
+        "firstName": "",
+        "lastName": ""
+      },
+      "address": {
+        "city": "",
+        "street": "",
+        "number": "",
+        "zipcode": "",
+        "geolocation": {
+          "lat": "",
+          "long": ""
+        }
+      },
+      "phone": ""
+    },
+    {
+      "id": 22,
+      "email": "priyanka.patil@gmail.com",
+      "userName": "swasti",
+      "password": "Swasti",
+      "name": {
+        "firstName": "Swasti",
+        "lastName": "bhoslae"
+      },
+      "address": {
+        "city": "Pune",
+        "street": "ddd",
+        "number": "33",
+        "zipcode": "sdd333"
+      },
+      "phone": "07466187276"
+    },
+    {
+      "id": 23,
+      "email": "priyanka.patil@gmail.com",
+      "userName": "Nilam",
+      "password": "Nilam1",
+      "name": {
+        "firstName": "Nilam",
+        "lastName": "Patil"
+      },
+      "address": {
+        "city": "Mumbai",
+        "street": "MG",
+        "number": "24",
+        "zipcode": "U9078"
+      },
+      "phone": "02367898909"
+    },
+    {
+      "id": 24,
+      "email": "Archu@gmail.com",
+      "userName": "Archu",
+      "password": "Archu",
+      "name": {
+        "firstName": "Arch",
+        "lastName": "Patil"
+      },
+      "address": {
+        "city": "Pune",
+        "street": "Sinha",
+        "number": "34",
+        "zipcode": "sd23"
+      },
+      "phone": "09898099099"
+    },
+    {
+      "id": 25,
+      "email": "ganesh@gmail.com",
+      "username": "ganesh",
+      "password": "ganesh",
+      "name": {
+        "firstName": "ganesh",
+        "lastName": "bhosale"
+      },
+      "address": {
+        "city": "mumbai",
+        "street": "ph",
+        "number": "89",
+        "zipcode": "09io"
+      },
+      "phone": "07899808909",
+      "userName": "d"
+    },
+    {
+      "id": 26,
+      "email": "rani@gmail.com",
+      "username": "Rani",
+      "password": "Ranimmm",
+      "name": {
+        "firstName": "Rani",
+        "lastName": "Patil"
+      },
+      "address": {
+        "city": "Pune",
+        "street": "MG",
+        "number": "78",
+        "zipcode": "gh67"
+      },
+      "phone": "07466157290"
+    },
+    {
+      "id": 27,
+      "email": "Swasti@gmail.com",
+      "username": "Swasti",
+      "password": "Swasti1",
+      "name": {
+        "firstName": "Swasti",
+        "lastName": "Bhosale"
+      },
+      "address": {
+        "city": "Pune",
+        "street": "MG",
+        "number": "45",
+        "zipcode": "G689JK"
+      },
+      "phone": "09090876785"
+    },
+    {
+      "id": 28,
+      "email": "Shiv@gmail.com",
+      "username": "Shiv",
+      "password": "Shiv1234",
+      "name": {
+        "firstName": "Shiv",
+        "lastName": "Bhosale"
+      },
+      "address": {
+        "city": "Pune",
+        "street": "SD",
+        "number": "34",
+        "zipcode": "G67"
+      },
+      "phone": "09789808763"
+    }
+  ]
+}

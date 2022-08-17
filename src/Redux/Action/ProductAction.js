@@ -40,4 +40,23 @@ export const getAddItem = (product) => {
 };
 
 
-	
+export const increaseItem = (product) =>{
+	return{
+		type:ActionTypes.INCREASEITEM,
+		payload:product
+	};
+};
+export const decreaseItem = (product) =>{
+	return{
+		type:ActionTypes.DECREASEITEM,
+		payload:product,
+	};
+};
+export const removeItem = (product) =>{
+	return{
+		type:ActionTypes.REMOVEITEM,
+		payload:product
+	};
+};
+
+

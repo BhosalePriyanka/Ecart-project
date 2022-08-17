@@ -2,39 +2,57 @@ import React from 'react';
 import { AiOutlineShoppingCart} from "react-icons/ai";
 import {useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
-import { useParams } from 'react-router-dom';
+import {Navbar , Container, Nav} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Main.css';
+import {useNavigate} from 'react-router-dom';
+
+export const NavBar = () => {
+const item = useSelector(state => state.item);
+
+const userDetails = JSON.parse(localStorage.getItem("user"));
+const navigate = useNavigate();
 
 
-function NavBar(){
-	const {id}  =useParams();
-
-	const state = useSelector(state => state.cart);
+function logout(){
+   localStorage.clear();
+   navigate("/Login", { replace: true });
+}
 return(
-<>
-<div className="header">
-	<div className="navbar">
-	<ul>
-	<li><button>Home </button></li>
+<> 
 
-	<Link to = './ProductListing'>
-	<li><button>Product </button></li>
-	</Link>
+<Navbar bg="dark" variant="dark" expand="lg" fixed="top" className = "text-uppercase h4">
+  <Container>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" variant="primary" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav>
+        <Nav.Link> 
+        <Link to = {`./ProductListing`}>Home</Link>
+        </Nav.Link>
+      { userDetails ? '' :
+        <Nav.Link>    
+         <Link to = {`./Login`}> Login </Link>
+        </Nav.Link>
+       
+      }
+        <Nav.Link>
+        <Link to = {`./Cart`}> <AiOutlineShoppingCart/>{item.length} </Link>
+        </Nav.Link>
+       
 
-	<li><button>About </button></li>
+    { userDetails ? 
+        <NavDropdown title={userDetails && userDetails.username} id="basic-nav-dropdown">
+          <NavDropdown.Item onClick = {logout}>Logout</NavDropdown.Item>
+          </NavDropdown>
+          : ''}
+         </Nav>
 
-	<li><button> Contact </button></li>
-	</ul>
-	</div>
+    </Navbar.Collapse>
+  </Container>
+</Navbar>
 
-<div className="cart">
-	<Link to = {`/Cart`}>
-	<button className= "buttonCart"> {state.length} <AiOutlineShoppingCart/></button>
-	</Link>
-</div>
-
-</div>
 </>
 )
 }
 
-export default NavBar; 
+export default NavBar;
