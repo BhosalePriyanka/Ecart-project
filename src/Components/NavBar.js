@@ -2,7 +2,7 @@ import React from 'react';
 import { AiOutlineShoppingCart} from "react-icons/ai";
 import {useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
-import {Navbar , Container, Nav} from 'react-bootstrap';
+import {Navbar , Container, Nav , NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Main.css';
 import {useNavigate} from 'react-router-dom';
