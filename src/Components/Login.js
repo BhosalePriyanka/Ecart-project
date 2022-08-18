@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import {Link} from 'react-router-dom';
 import {Form , Button} from 'react-bootstrap';
 import Validate from './Validate.js';
@@ -31,9 +31,12 @@ const filterUser = jsonData.filter(jsonData=> { return jsonData.username === sta
 /*const filterpassword = jsonData.filter(jsonData=> { return jsonData.password === state.password});*/
 console.log(filterUser);
 if(filterUser[0]){
-								localStorage.setItem('user', JSON.stringify(filterUser[0]));
+
+
+							localStorage.setItem('user', JSON.stringify(filterUser[0]));
+
 			
-							 navigate("/ProductListing", { replace: true });
+							navigate("/ProductListing", { replace: true });
 						}
 							else{
 								alert("Login Failed, Check Incorrect Field");

@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom';
 
 function Cart(){
 const item= useSelector(state => state.item);
-const userDetails = JSON.parse(localStorage.getItem("user"));
+const userDetails = localStorage.getItem("user");
 let totalAmount = 0;
 const dispatch = useDispatch();
 
