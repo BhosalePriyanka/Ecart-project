@@ -25,7 +25,7 @@ return (
 <Home />
 
 <Routes>
-<Route exact path = * element={<ProductListing/>} />
+<Route exact path = '*' element={<ProductListing/>} />
 <Route exact path = '/product/:id' element={<ProductDetails/>}/>
 <Route exact path = '/ProductListing' element={<ProductListing/>} />
 <Route exact path = '/Cart' element={<Cart/>} />
