@@ -39,7 +39,7 @@ return(
 {filter.map((product) => {
 const {id, title, image, price} = product;
 return (
-	<div className = "products">
+	<div className = "products" key = {id} >
 		<img  src ={image} alt = {title}/>
 		<div className = "fw-bold">{title}</div>
 		<div className = "mt-3"> <button> Price:${price} </button> </div>

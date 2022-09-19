@@ -12,6 +12,7 @@ const item = useSelector(state => state.item);
 
 const userDetails = JSON.parse(localStorage.getItem("user"));
 
+
 const navigate = useNavigate();
 
 
@@ -19,6 +20,8 @@ function logout(){
    localStorage.clear();
    navigate("/Login", { replace: true });
 }
+
+
 return(
 <> 
 
@@ -27,18 +30,18 @@ return(
     <Navbar.Toggle aria-controls="basic-navbar-nav" variant="primary" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav>
-        <Nav.Link> 
-        <Link to = {`./ProductListing`}>Home</Link>
-        </Nav.Link>
-      { userDetails ? '' :
-        <Nav.Link>    
-         <Link to = {`./Login`}> Login </Link>
-        </Nav.Link>
+     
+        <Link  className = "mx-2" to = {`./ProductListing`}>Home</Link> 
+
+        { userDetails ? '' :
+     
+         <Link className = "mx-2" to = {`./Login`}> Login </Link>
+    
        
       }
-        <Nav.Link>
-        <Link to = {`./Cart`}> <AiOutlineShoppingCart/>{item.length} </Link>
-        </Nav.Link>
+    
+        <Link className = "mx-2" to = {`./Cart`}> <AiOutlineShoppingCart/>{item.length} </Link>
+     
        
 
     { userDetails ? 

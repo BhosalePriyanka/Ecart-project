@@ -18,99 +18,6 @@
       "phone": "07466157290"
     },
     {
-      "id": "5",
-      "email": "priyanka.patil@gmail.com",
-      "userName": "wersdfr",
-      "password": "wer234",
-      "name": {
-        "firstName": "sdfsdf",
-        "lastName": "sdf"
-      },
-      "address": {
-        "city": "sff",
-        "street": "sdf",
-        "number": "23",
-        "zipcode": "sff23",
-        "geolocation": {
-          "lat": "",
-          "long": ""
-        }
-      },
-      "phone": "23423423422"
-    },
-    {
-      "id": 21,
-      "email": "",
-      "userName": "",
-      "password": "",
-      "name": {
-        "firstName": "",
-        "lastName": ""
-      },
-      "address": {
-        "city": "",
-        "street": "",
-        "number": "",
-        "zipcode": "",
-        "geolocation": {
-          "lat": "",
-          "long": ""
-        }
-      },
-      "phone": ""
-    },
-    {
-      "id": 22,
-      "email": "priyanka.patil@gmail.com",
-      "userName": "swasti",
-      "password": "Swasti",
-      "name": {
-        "firstName": "Swasti",
-        "lastName": "bhoslae"
-      },
-      "address": {
-        "city": "Pune",
-        "street": "ddd",
-        "number": "33",
-        "zipcode": "sdd333"
-      },
-      "phone": "07466187276"
-    },
-    {
-      "id": 23,
-      "email": "priyanka.patil@gmail.com",
-      "userName": "Nilam",
-      "password": "Nilam1",
-      "name": {
-        "firstName": "Nilam",
-        "lastName": "Patil"
-      },
-      "address": {
-        "city": "Mumbai",
-        "street": "MG",
-        "number": "24",
-        "zipcode": "U9078"
-      },
-      "phone": "02367898909"
-    },
-    {
-      "id": 24,
-      "email": "Archu@gmail.com",
-      "userName": "Archu",
-      "password": "Archu",
-      "name": {
-        "firstName": "Arch",
-        "lastName": "Patil"
-      },
-      "address": {
-        "city": "Pune",
-        "street": "Sinha",
-        "number": "34",
-        "zipcode": "sd23"
-      },
-      "phone": "09898099099"
-    },
-    {
       "id": 25,
       "email": "ganesh@gmail.com",
       "username": "ganesh",
@@ -178,6 +85,40 @@
         "zipcode": "G67"
       },
       "phone": "09789808763"
+    },
+    {
+      "id": 29,
+      "email": "p@gmail.com",
+      "username": "ganesh",
+      "password": "qweqwe",
+      "name": {
+        "firstName": "Ganesh",
+        "lastName": "Bhosale"
+      },
+      "address": {
+        "city": "Glasgow",
+        "street": "CailheadDrive",
+        "number": "54",
+        "zipcode": "G68 9FA"
+      },
+      "phone": "12341234123"
+    },
+    {
+      "id": 30,
+      "email": "ram@gmail.com",
+      "username": "Ram",
+      "password": "ram123",
+      "name": {
+        "firstName": "RAM",
+        "lastName": "PATIL"
+      },
+      "address": {
+        "city": "PUNE",
+        "street": "PUNE",
+        "number": "54",
+        "zipcode": "123123"
+      },
+      "phone": "01234512345"
     }
   ]
 }

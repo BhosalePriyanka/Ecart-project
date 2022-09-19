@@ -48,17 +48,20 @@ const handleAddressChange = (event) => {
 
 const handleSubmit = async(event) => {
 event.preventDefault();
-console.log(state);
-setError(Validate(state , false));
+
+setError(Validate(state ,false));
 const error = Validate(state);
+
 const response = await fetch('http://localhost:3000/users')
 const jsonData =  await response.json();
-console.log(jsonData)
+
 const filteremail = jsonData.filter(jsonData=> {return jsonData.email === state.email});
 
 if(filteremail && filteremail.length > 0 ){
 	setUser(true);
 }
+
+
 
 if(error.isValid && filteremail && filteremail.length === 0 ){
 	fetch('http://localhost:3000/users',{
@@ -67,7 +70,7 @@ if(error.isValid && filteremail && filteremail.length === 0 ){
             headers: {
 		      "Access-Control-Allow-Origin": "*",
 		      "Content-Type": "application/json"
-    },
+    					},
             body:JSON.stringify(state)
         }) 
           .then((res)=> {

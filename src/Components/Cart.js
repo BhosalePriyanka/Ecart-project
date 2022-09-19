@@ -5,6 +5,7 @@ import {increaseItem , removeItem, decreaseItem} from '../Redux/Action/ProductAc
 import { MdDelete} from "react-icons/md";
 import { AiFillPlusCircle,AiFillMinusCircle } from "react-icons/ai";
 import {Link} from 'react-router-dom';
+import Table from 'react-bootstrap/Table';
 
 function Cart(){
 const item= useSelector(state => state.item);
@@ -19,23 +20,29 @@ return(
 {
 item && item.length === 0 ? ( <h1>Your Cart Is Empty </h1> ) : 
 item && item.map((item) => {	
-const {title, image, price, quantity} = item;
+const {id ,title, image, price, quantity} = item;
 item.quantity = item.quantity ? item.quantity : 1;
 totalAmount  += quantity * price;
+console.log(id)
 
 return(
 <>
-<div className = "col-lg-6 col-sm-12 mx-auto mt-5 p-0">
-<table className = "table border border-dark">
-<tr>
+<div className = "col-lg-6 col-sm-12 mx-auto mt-5 p-0" >
+<Table striped bordered hover>
+<thead>
+<tr key = {item.id}>
 <th>Image</th>
 <th> Name</th>
 <th>Price</th>
 <th>Quantity</th>
 <th>Amount</th>
 </tr>
-<tr>
-<td className = "col-lg-5"><img className = "pe-none w-50" src ={image} alt = {title}/></td>
+</thead>
+
+
+<tbody >
+<tr key = {item.id}>
+<td className = "col-lg-5"><img className = "pe-none w-50" src ={image} alt = {title} /></td>
 <td className = "col-2"> {title} </td>
 <td className = "col-2"> ${price} </td>
 <td className = "col-2">
@@ -48,7 +55,8 @@ return(
 <div onClick = {()=> dispatch(removeItem(item))}> <MdDelete/> </div>
 </td>
 </tr>
-</table>	
+</tbody>
+</Table>	
 </div>
 </>
 );
@@ -56,7 +64,7 @@ return(
 
 {totalAmount > 0 ? <div className="chekOut"> 
 <br/>
-<button className = "btn btn-primary pe-none" >Total Amount to Pay : ${totalAmount}</button>
+<button className = "btn btn-primary pe-none" >Total Amount to Pay : ${totalAmount.toFixed(2)}</button>
 <br/><br/>
 
 {userDetails ? 

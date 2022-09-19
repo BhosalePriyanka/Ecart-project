@@ -24,12 +24,12 @@ useEffect(()=>{
 },[]);
 
 const product= useSelector(state => state.product);
-const {title, image, price,  description} = product;
+const { title, image, price,  description} = product;
 
 return(
 <>
 <div className = "container">
-{Object.keys(product).length === 0 ? ( <h1 className = "mt-5">Loading....  <div class="spinner-border"></div></h1> ) : 
+{Object.keys(product).length === 0 ? ( <h1 className = "mt-5">Loading....  <div className="spinner-border"></div></h1> ) : 
 (
 	<div className ="container">
 	<div className = "w-50 border border-dark mx-auto">

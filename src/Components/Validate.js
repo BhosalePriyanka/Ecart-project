@@ -39,14 +39,14 @@ if(!state.username){
 if(!state.name.firstName){
 	error.firstName = "Firstname is required.";
 	isValid = false;
-} else if(!/^[a-zA-Z]+$/.test(state.name.firstName)){
+} else if(!/^[a-zA-Z\s]+$/.test(state.name.firstName)){
 	error.firstName = "First name is letter only.";
 	isValid = false;
 } 
 if(!state.name.lastName){
 	error.lastName = "Lastname is required.";
 	isValid = false;
-} else if(!/^[a-zA-Z]+$/.test(state.name.lastName)){
+} else if(!/^[a-zA-Z\s]+$/.test(state.name.lastName)){
 	error.lastName = "Last name is letter only.";
 	isValid = false;
 }
@@ -54,14 +54,14 @@ if(!state.name.lastName){
 if(!state.address.city){
 	error.city = "City name is required.";
 	isValid = false;
-}else if(!/^[a-zA-Z]+$/.test(state.address.city)){
+}else if(!/^[a-zA-Z\s]+$/.test(state.address.city)){
 	error.city = "City name is letter only.";
 	isValid = false;
 }
 if(!state.address.street){
 	error.street = "Street name is required.";
 	isValid = false;
-}else if(!/^[a-zA-Z]+$/.test(state.address.street)){
+}else if(!/^[a-zA-Z\s]+$/.test(state.address.street)){
 	error.street = "Street name is letter only.";
 	isValid = false;
 }
@@ -77,7 +77,7 @@ if(!state.address.zipcode){
 if(!state.phone){
 	error.phone = "Phonenumber is required.";
 	isValid = false;
-}else if(state.phone.length < 11){
+}else if(state.phone.length < 10){
 	error.phone = "Invalid mobile number .";
 	isValid = false;
 }
