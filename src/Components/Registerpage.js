@@ -64,7 +64,7 @@ if(filteremail && filteremail.length > 0 ){
 
 
 if(error.isValid && filteremail && filteremail.length === 0 ){
-	fetch('http://localhost:3000/users',{
+	fetch('https://my-json-server.typicode.com/BhosalePriyanka/Ecart-json/users',{
             method:"POST",
             mode: 'cors',
             headers: {
