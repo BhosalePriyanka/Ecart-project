@@ -24,7 +24,7 @@ const handleSubmit = async(event) => {
 event.preventDefault();
 setError(Validate(state , true));
 console.log(state);
-const response = await fetch('http://localhost:3000/users')
+const response = await fetch('https://my-json-server.typicode.com/BhosalePriyanka/Ecart-json/users')
 const jsonData = await response.json();
 
 const filterUser = jsonData.filter(jsonData=> { return jsonData.username === state.username && jsonData.password === state.password});

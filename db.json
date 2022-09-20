@@ -119,6 +119,40 @@
         "zipcode": "123123"
       },
       "phone": "01234512345"
+    },
+    {
+      "id": 31,
+      "email": "G@gmail.com",
+      "username": "ram",
+      "password": "123qwe",
+      "name": {
+        "firstName": "sdfsdd",
+        "lastName": "sdfsdf"
+      },
+      "address": {
+        "city": "ss",
+        "street": "sss",
+        "number": "11",
+        "zipcode": "123"
+      },
+      "phone": "1234123412"
+    },
+    {
+      "id": 32,
+      "email": "dd@gmail.com",
+      "username": "ganesh",
+      "password": "123qwe",
+      "name": {
+        "firstName": "Ganesh",
+        "lastName": "Bhosale"
+      },
+      "address": {
+        "city": "Glasgow",
+        "street": "CailheadDrive",
+        "number": "54",
+        "zipcode": "123123"
+      },
+      "phone": "1234512345"
     }
   ]
 }
