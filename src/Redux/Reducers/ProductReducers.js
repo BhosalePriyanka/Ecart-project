@@ -42,6 +42,10 @@ switch(action.type){
 		else{
 			return state;
 		}
+		case ActionTypes.PAYMENTDONE:
+			{
+				return state = []
+			}
 }
 
 switch(action.type){

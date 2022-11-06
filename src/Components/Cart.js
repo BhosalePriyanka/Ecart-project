@@ -1,7 +1,7 @@
 import React from 'react';
 import './Main.css';
 import { useSelector, useDispatch } from 'react-redux';
-import {increaseItem , removeItem, decreaseItem} from '../Redux/Action/ProductAction';
+import {increaseItem , removeItem, decreaseItem,paymentdoneCart} from '../Redux/Action/ProductAction';
 import { MdDelete} from "react-icons/md";
 import { AiFillPlusCircle,AiFillMinusCircle } from "react-icons/ai";
 import {Link} from 'react-router-dom';
@@ -21,8 +21,8 @@ return(
 item && item.length === 0 ? ( <h1>Your Cart Is Empty </h1> ) : 
 item && item.map((item) => {	
 const {id ,title, image, price, quantity} = item;
-item.quantity = item.quantity ? item.quantity : 1;
-totalAmount  += quantity * price;
+item.quantity = item.quantity ? item.quantity : 1 ;
+totalAmount  += item.quantity * price;
 console.log(id)
 
 return(
@@ -70,7 +70,7 @@ return(
 {userDetails ? 
 
 <Link to = {`/Payment`}>
-<button className="btn btn-success"> Proceed To Checkout</button>
+<button className="btn btn-success" onClick={() => dispatch(paymentdoneCart(item))}> Proceed To Checkout</button>
 </Link>
 :
 <Link to = {`/Login`}>

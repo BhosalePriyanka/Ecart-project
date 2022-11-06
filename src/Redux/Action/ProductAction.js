@@ -39,6 +39,11 @@ export const getAddItem = (product) => {
 	};
 };
 
+export const paymentdoneCart = (product) =>{
+	return{
+		type: ActionTypes.PAYMENTDONE
+	}
+}
 
 export const increaseItem = (product) =>{
 	return{
