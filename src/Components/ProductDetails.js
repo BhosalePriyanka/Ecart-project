@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {useDispatch , useSelector} from 'react-redux';
 import {useEffect} from 'react';
@@ -16,15 +16,22 @@ const response = await fetch(`https://fakestoreapi.com/products/${id}`)
 const jsonData = await response.json();
 dispatch(selectedProduct(jsonData));
 }
-useEffect(()=>{
-	 fetchSelectedProduct();
-	 return () =>{
-	 	dispatch(removepriviousProduct());
-	 } 
-},[]);
+
+
 
 const product= useSelector(state => state.product);
-const { title, image, price,  description} = product;
+const { title, image, price,  description,} = product;
+ 
+
+useEffect(()=>{
+	fetchSelectedProduct();
+	return () =>{
+		dispatch(removepriviousProduct());
+	}
+	
+},[]);
+
+
 
 return(
 <>
@@ -37,7 +44,7 @@ return(
 		<div className = "mt-5 fw-bold">{title}</div>
 		<div className = "pe-none mt-2"> <button> Price:${price} </button> </div>
 		<div> ${description}</div>
-		<button className="btn btn-primary mx-2 my-5" onClick={() => dispatch(getAddItem(product))}> Add To Cart </button>
+		<button className="btn btn-primary mx-2 my-5"  onClick={() => dispatch(getAddItem(product))}> Add To Cart </button>
 		<Link to = {`/Cart`}>
 		<button className = "btn btn-primary mx-2 my-5"> Go To Cart</button>
 		</Link>

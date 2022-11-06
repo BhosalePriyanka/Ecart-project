@@ -40,7 +40,8 @@ switch(action.type){
  		return [ ...state , action.payload];
  		}
 		else{
-			return state;
+			return alert("Already Added")
+
 		}
 		case ActionTypes.PAYMENTDONE:
 			{

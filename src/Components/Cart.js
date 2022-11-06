@@ -23,7 +23,8 @@ item && item.map((item) => {
 const {id ,title, image, price, quantity} = item;
 item.quantity = item.quantity ? item.quantity : 1 ;
 totalAmount  += item.quantity * price;
-console.log(id)
+console.log(item.quantity * price)
+
 
 return(
 <>
