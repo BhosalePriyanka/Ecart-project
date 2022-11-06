@@ -52,7 +52,7 @@ event.preventDefault();
 setError(Validate(state ,false));
 const error = Validate(state);
 
-const response = await fetch('https://my-json-server.typicode.com/BhosalePriyanka/Ecart-json/users')
+const response = await fetch('http://localhost:3000/users')
 const jsonData =  await response.json();
 
 const filteremail = jsonData.filter(jsonData=> {return jsonData.email === state.email});
@@ -87,7 +87,7 @@ return(
 <>
 <div className ="container mt-5 p-5">
 <h3>SIGN UP FORM</h3>
-<Form className = "border border-dark col-lg-6 col-sm-12 mx-auto mt-5 p-5">
+<Form className = "border shadow col-lg-6 col-sm-12 mx-auto mt-5 p-5">
 <Form.Group>
     <Form.Label>Email Id</Form.Label><br/>
 	<Form.Control type='email' name="email" value = {state.email} onChange={handleChange} />
@@ -97,7 +97,7 @@ return(
 	<br/>
 <Form.Group>
 	<Form.Label>Username </Form.Label><br/>
-	<Form.Control type='text' name="username" value = {state.username} onChange={handleChange}/>
+	<Form.Control type='text' name="username" value = {state.username} onChange={handleChange} />
 	{error.username && <p className ="text-danger"> {error.username} </p>}
 </Form.Group>
 	<br/>

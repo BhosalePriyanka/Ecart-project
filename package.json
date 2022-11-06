@@ -1,5 +1,5 @@
 {
-  "homepage" : "http://BhosalePriyanka.github.io/Ecart-project",
+  "homepage": "http://BhosalePriyanka.github.io/Ecart-project",
   "name": "shoppingcart",
   "version": "0.1.0",
   "private": true,
@@ -16,6 +16,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.2.0",
+    "react-error-boundary": "^3.1.4",
     "react-icons": "^4.4.0",
     "react-redux": "^8.0.2",
     "react-router": "^6.3.0",

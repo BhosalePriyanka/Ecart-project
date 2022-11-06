@@ -14,6 +14,8 @@ import Login from './Components/Login';
 import Registerpage from './Components/Registerpage';
 import Payment from './Components/Payment';
 import ProductListing from './Components/ProductListing';
+import {ErrorBoundary} from 'react-error-boundary';
+import { Fallback } from './Components/Fallback'
 
 
 function App() {
@@ -22,8 +24,12 @@ return (
 
 <Router>
 <NavBar />
+<ErrorBoundary FallbackComponent = { Fallback} >
 <Home />
+</ErrorBoundary>
 
+
+<ErrorBoundary FallbackComponent = { Fallback}>
 <Routes>
 <Route exact path = '*' element={<ProductListing/>} />
 <Route exact path = '/product/:id' element={<ProductDetails/>}/>
@@ -34,10 +40,15 @@ return (
 <Route exact path = '/Login' element={<Login/>} /> 
 <Route exact path = '/Payment' element={<Payment/>} /> 
 </Routes>
+</ErrorBoundary>
+
 
 
 </Router>
+<ErrorBoundary FallbackComponent = { Fallback}>
 <Footer />
+</ErrorBoundary>
+
 </>
 
 );

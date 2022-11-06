@@ -27,10 +27,10 @@ console.log(id)
 
 return(
 <>
-<div className = "col-lg-6 col-sm-12 mx-auto mt-5 p-0" >
+<div className = "col-lg-6 col-sm-12 mx-auto mt-5 p-0 shadow" >
 <Table striped bordered hover>
 <thead>
-<tr key = {item.id}>
+<tr>
 <th>Image</th>
 <th> Name</th>
 <th>Price</th>
@@ -40,9 +40,9 @@ return(
 </thead>
 
 
-<tbody >
-<tr key = {item.id}>
-<td className = "col-lg-5"><img className = "pe-none w-50" src ={image} alt = {title} /></td>
+<tbody key = {item.id}>
+<tr>
+<td  className = "col-lg-5"><img className = "pe-none w-50" src ={image} alt = {title} /></td>
 <td className = "col-2"> {title} </td>
 <td className = "col-2"> ${price} </td>
 <td className = "col-2">

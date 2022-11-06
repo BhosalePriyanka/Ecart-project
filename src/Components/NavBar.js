@@ -1,11 +1,10 @@
 import React from 'react';
 import { AiOutlineShoppingCart} from "react-icons/ai";
 import {useSelector} from 'react-redux';
-import {Link} from 'react-router-dom';
 import {Navbar , Container, Nav, NavDropdown} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Main.css';
-import {useNavigate} from 'react-router-dom';
+import {useNavigate, Link} from 'react-router-dom';
 
 export const NavBar = () => {
 const item = useSelector(state => state.item);
@@ -25,30 +24,26 @@ function logout(){
 return(
 <> 
 
-<Navbar bg="dark" variant="dark" expand="lg" fixed="top" className = "text-uppercase h4">
+<Navbar bg="dark" variant="dark" expand="lg" fixed="top" className = " text-uppercase h4 p-3">
   <Container>
     <Navbar.Toggle aria-controls="basic-navbar-nav" variant="primary" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav>
-     
-        <Link  className = "mx-2" to = {`./ProductListing`}>Home</Link> 
-
-        { userDetails ? '' :
-     
-         <Link className = "mx-2" to = {`./Login`}> Login </Link>
-    
-       
-      }
-    
-        <Link className = "mx-2" to = {`./Cart`}> <AiOutlineShoppingCart/>{item.length} </Link>
-     
-       
-
+        <Nav.Link  className = "mx-2 " as = {Link} to = {`./ProductListing`}>Home</Nav.Link> 
+        <Nav.Link className = "mx-2 " as = {Link} to = {`./Cart`}> <AiOutlineShoppingCart/>{item.length} </Nav.Link>
+  
     { userDetails ? 
+
         <NavDropdown title={ userDetails && userDetails.username} id="basic-nav-dropdown">
-          <NavDropdown.Item onClick = {logout}>Logout</NavDropdown.Item>
-          </NavDropdown>
-          : ''}
+        <NavDropdown.Item onClick = {logout}>Logout</NavDropdown.Item>
+        </NavDropdown>
+
+          : 
+
+         <Nav.Link className = "mx-2 " as = {Link} to = {`./Login`}> Login </Nav.Link>
+         
+    }
+
          </Nav>
 
     </Navbar.Collapse>

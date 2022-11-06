@@ -23,8 +23,8 @@ const handleSubmit = async(event) => {
 
 event.preventDefault();
 setError(Validate(state , true));
-console.log(state);
-const response = await fetch('https://my-json-server.typicode.com/BhosalePriyanka/Ecart-json/users')
+
+const response = await fetch('http://localhost:3000/users')
 const jsonData = await response.json();
 
 const filterUser = jsonData.filter(jsonData=> { return jsonData.username === state.username && jsonData.password === state.password});
@@ -32,8 +32,8 @@ const filterUser = jsonData.filter(jsonData=> { return jsonData.username === sta
 console.log(filterUser);
 if(filterUser[0]){
 
-
-							localStorage.setItem('user', JSON.stringify(filterUser[0]));
+							 localStorage.setItem('user', JSON.stringify(filterUser[0]));
+						
 
 			
 							navigate("/ProductListing", { replace: true });
@@ -49,11 +49,10 @@ if(filterUser[0]){
 		<>
 	<div className ="container">
 <h3>Login Form</h3>
-<Form className = "border border-dark col-lg-6 col-sm-12 mx-auto mt-5 p-5">
+<Form className = "border shadow col-lg-4 col-sm-12 mx-auto mt-5 p-5" >
 		<Form.Group>
 		<Form.Label> Username </Form.Label>
-		<Form.Control type='text'name="username" value = {state.username} 
-		onChange={handleChange}/>
+		<Form.Control type='text'name="username" value = {state.username} onChange={handleChange} />
 		{error.username && <p className ="text-danger"> {error.username} </p>}
 		</Form.Group>
 

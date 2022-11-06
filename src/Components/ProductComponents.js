@@ -2,8 +2,6 @@ import React from 'react';
 import { useSelector , useDispatch}  from 'react-redux';
 import './Main.css';
 import {Link} from 'react-router-dom';
-import {NavDropdown} from 'react-bootstrap';
-
 import {useState ,useEffect} from 'react';
 
 
@@ -39,8 +37,8 @@ return(
 {filter.map((product) => {
 const {id, title, image, price} = product;
 return (
-	<div className = "products" key = {id} >
-		<img  src ={image} alt = {title}/>
+	<div className = "block m-5 p-2 shadow border" style = {{width : "20rem" , height :  "auto"}} key = {id} >
+		<img className='image' style = {{  width : "15rem" , height : "15rem"}} src ={image} alt = {title}/>
 		<div className = "fw-bold">{title}</div>
 		<div className = "mt-3"> <button> Price:${price} </button> </div>
 		<Link  to = {`/product/${id}`}>
