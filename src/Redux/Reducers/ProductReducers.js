@@ -35,13 +35,15 @@ switch(action.type){
 export const getAddItem = (state= [], action) => {
 switch(action.type){	
 	    case ActionTypes.ADDITEM:
+			
 		const  exist = state.filter((item) => item.id  === action.payload.id);
+
  		if (exist < 1){
- 		return [ ...state , action.payload];
+ 		return alert("added"),
+		[... state ,  action.payload ]
  		}
 		else{
-			return alert("Already Added")
-
+			return alert("Added alreday in cart");
 		}
 		case ActionTypes.PAYMENTDONE:
 			{

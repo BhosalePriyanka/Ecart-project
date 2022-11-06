@@ -21,16 +21,11 @@ dispatch(selectedProduct(jsonData));
 
 const product= useSelector(state => state.product);
 const { title, image, price,  description,} = product;
- 
+
 
 useEffect(()=>{
 	fetchSelectedProduct();
-	return () =>{
-		dispatch(removepriviousProduct());
-	}
-	
 },[]);
-
 
 
 return(
@@ -44,7 +39,7 @@ return(
 		<div className = "mt-5 fw-bold">{title}</div>
 		<div className = "pe-none mt-2"> <button> Price:${price} </button> </div>
 		<div> ${description}</div>
-		<button className="btn btn-primary mx-2 my-5"  onClick={() => dispatch(getAddItem(product))}> Add To Cart </button>
+		<button className="btn btn-primary mx-2 my-5"  onClick= {() => dispatch(getAddItem(product))}> Add To Cart </button>
 		<Link to = {`/Cart`}>
 		<button className = "btn btn-primary mx-2 my-5"> Go To Cart</button>
 		</Link>

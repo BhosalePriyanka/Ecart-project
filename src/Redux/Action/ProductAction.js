@@ -35,7 +35,7 @@ export const cartItem = (product) => {
 export const getAddItem = (product) => {
 	return{
 		type: ActionTypes.ADDITEM,
-		payload:product
+		payload: product
 	};
 };
 
