@@ -52,13 +52,13 @@ if(filterUser[0]){
 <Form className = "border shadow col-lg-4 col-sm-12 mx-auto mt-5 p-5" >
 		<Form.Group>
 		<Form.Label> Username </Form.Label>
-		<Form.Control type='text'name="username" value = {state.username} onChange={handleChange} />
+		<Form.Control type='text'name="username" value = {state.username} onChange={handleChange} autoComplete = "off" />
 		{error.username && <p className ="text-danger"> {error.username} </p>}
 		</Form.Group>
 
 		<Form.Group>
 		<Form.Label>Password</Form.Label>
-		<Form.Control type='password' name="password" value = {state.password} onChange={handleChange}/>
+		<Form.Control type='password' name="password" value = {state.password} onChange={handleChange} autoComplete = "off" />
 		{error.password && <p className ="text-danger"> {error.password} </p>}
 		</Form.Group>
 		<br/>
