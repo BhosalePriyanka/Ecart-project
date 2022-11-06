@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Ecart-project/static/css/main.ebc9104b.css",
-    "main.js": "/Ecart-project/static/js/main.ed054d6d.js",
+    "main.css": "/Ecart-project/static/css/main.3d876ae2.css",
+    "main.js": "/Ecart-project/static/js/main.1f1cf1a5.js",
     "static/media/img2.jpeg": "/Ecart-project/static/media/img2.2b0d8366bfc5e62f3022.jpeg",
     "static/media/img3.jpeg": "/Ecart-project/static/media/img3.445f37f95cf4b4c14f8f.jpeg",
     "static/media/img1.webp": "/Ecart-project/static/media/img1.5e1c1c95ae31ee7c0039.webp",
     "index.html": "/Ecart-project/index.html",
-    "main.ebc9104b.css.map": "/Ecart-project/static/css/main.ebc9104b.css.map",
-    "main.ed054d6d.js.map": "/Ecart-project/static/js/main.ed054d6d.js.map"
+    "main.3d876ae2.css.map": "/Ecart-project/static/css/main.3d876ae2.css.map",
+    "main.1f1cf1a5.js.map": "/Ecart-project/static/js/main.1f1cf1a5.js.map"
   },
   "entrypoints": [
-    "static/css/main.ebc9104b.css",
-    "static/js/main.ed054d6d.js"
+    "static/css/main.3d876ae2.css",
+    "static/js/main.1f1cf1a5.js"
   ]
 }
