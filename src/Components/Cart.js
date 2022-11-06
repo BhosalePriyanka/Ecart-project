@@ -50,7 +50,7 @@ return(
 <div> {item.quantity}</div>
 <div onClick={()=> dispatch(decreaseItem(item))}><AiFillMinusCircle/> </div>	
 </td>
-<td className = "col-2"> <div>${quantity*price} </div></td>
+<td className = "col-2"> <div>${item.quantity*price} </div></td>
 <td className = "col-2">
 <div onClick = {()=> dispatch(removeItem(item))}> <MdDelete/> </div>
 </td>
