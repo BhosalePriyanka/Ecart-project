@@ -34,7 +34,7 @@ return(
 {Object.keys(product).length === 0 ? ( <h1 className = "mt-5">Loading....  <div className="spinner-border"></div></h1> ) : 
 (
 	<div className ="container">
-	<div className = "w-50 border shadow mx-auto">
+	<div className = " w-50 border shadow mx-auto overflow-auto">
 		<img className = "pe-none w-25 h-25" src ={image} alt = {title}/>
 		<div className = "mt-5 fw-bold">{title}</div>
 		<div className = "pe-none mt-2"> <button> Price:${price} </button> </div>

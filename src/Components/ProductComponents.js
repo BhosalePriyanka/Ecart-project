@@ -3,7 +3,7 @@ import { useSelector , useDispatch}  from 'react-redux';
 import './Main.css';
 import {Link} from 'react-router-dom';
 import {useState ,useEffect} from 'react';
-
+import { Button, ButtonGroup} from 'react-bootstrap';
 
 export const ProductComponents = () => {
 const products = useSelector(state => state.allProducts.products);
@@ -22,15 +22,15 @@ useEffect(() => {
 return(
 <>
 
-<nav className = "my-1 w-100" >
-<ul className = "d-lg-flex d-sm-block  list-unstyled justify-content-center">
-<li><button className = "btn btn-primary mt-sm-2 mx-lg-2" onClick={() => setFilter(products)}>All</button></li>
-<li><button className = "btn btn-primary mt-sm-2 mx-lg-2" onClick={()=> filterProduct("men's clothing")}> Men Clothing </button></li>
-<li><button className = "btn btn-primary mt-sm-2  mx-lg-2" onClick={()=> filterProduct("women's clothing")}>Women clothing </button></li>
-<li><button className = "btn btn-primary mt-sm-2  mx-lg-2" onClick={()=> filterProduct("jewelery")}>Jewelery</button></li>
-<li><button className = "btn btn-primary mt-sm-2 mx-xs-5 mx-lg-2" onClick={()=> filterProduct("electronics")}>Electronics</button></li>
-</ul>      
-</nav>
+
+<ButtonGroup className='d-block w-100'>
+<Button onClick={() => setFilter(products)}>All</Button>
+<Button  onClick={()=> filterProduct("men's clothing")}> Men Clothing </Button>
+<Button onClick={()=> filterProduct("women's clothing")}>Women clothing </Button>
+<Button  onClick={()=> filterProduct("jewelery")}>Jewelery</Button>
+<Button  onClick={()=> filterProduct("electronics")}>Electronics</Button>
+</ButtonGroup>
+
 
 
 
