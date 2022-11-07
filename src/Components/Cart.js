@@ -29,7 +29,7 @@ console.log(item.quantity * price)
 return(
 <>
 <div className = "col-lg-6 col-sm-12 mx-auto mt-5 p-0 shadow" >
-<Table striped bordered hover>
+<Table striped bordered hover responsive>
 <thead>
 <tr>
 <th>Image</th>
