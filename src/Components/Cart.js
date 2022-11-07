@@ -43,7 +43,7 @@ return(
 
 <tbody key = {item.id}>
 <tr>
-<td  className = "col-lg-5"><img className = "pe-none w-50" src ={image} alt = {title} /></td>
+<td  className = "col-2"><img className = "image-fluid" style={{height:"200px"}} src ={image} alt = {title} /></td>
 <td className = "col-2"> {title} </td>
 <td className = "col-2"> ${price} </td>
 <td className = "col-2">
