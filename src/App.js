@@ -41,9 +41,6 @@ return (
 <Route exact path = '/Payment' element={<Payment/>} /> 
 </Routes>
 </ErrorBoundary>
-
-
-
 </Router>
 <ErrorBoundary FallbackComponent = { Fallback}>
 <Footer />

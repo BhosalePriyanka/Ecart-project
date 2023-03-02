@@ -54,7 +54,6 @@ const error = Validate(state);
 
 const response = await fetch('http://localhost:3000/users')
 const jsonData =  await response.json();
-
 const filteremail = jsonData.filter(jsonData=> {return jsonData.email === state.email});
 
 if(filteremail && filteremail.length > 0 ){

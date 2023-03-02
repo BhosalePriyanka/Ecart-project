@@ -22,7 +22,7 @@ const handleChange = (event) => {
 const handleSubmit = async(event) => {
 
 event.preventDefault();
-setError(Validate(state , true));
+setError(Validate(state, true));
 
 const response = await fetch('http://localhost:3000/users')
 const jsonData = await response.json();
@@ -30,12 +30,7 @@ const jsonData = await response.json();
 const filterUser = jsonData.filter(jsonData=> { return jsonData.username === state.username && jsonData.password === state.password});
 /*const filterpassword = jsonData.filter(jsonData=> { return jsonData.password === state.password});*/
 console.log(filterUser);
-if(filterUser[0]){
-
-							 localStorage.setItem('user', JSON.stringify(filterUser[0]));
-						
-
-			
+if(filterUser[0]){			localStorage.setItem('user', JSON.stringify(filterUser[0]));
 							navigate("/ProductListing", { replace: true });
 						}
 							else{

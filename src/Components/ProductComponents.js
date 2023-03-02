@@ -4,10 +4,15 @@ import './Main.css';
 import {Link} from 'react-router-dom';
 import {useState ,useEffect} from 'react';
 import { Button, ButtonGroup} from 'react-bootstrap';
+import { getAddItem} from '../Redux/Action/ProductAction';
+
+
 
 export const ProductComponents = () => {
 const products = useSelector(state => state.allProducts.products);
 const[filter, setFilter] = useState(products);
+const dispatch = useDispatch();
+const product= useSelector(state => state.product);
 
 const filterProduct = (cat) =>{
 const filterCat = products.filter(product => { return product.category === cat });
@@ -38,12 +43,16 @@ return(
 const {id, title, image, price} = product;
 return (
 	<div className = "block m-5 p-2 shadow border" style = {{width : "20rem" , height :  "auto"}} key = {id} >
+		<Link  to = {`/product/${id}`}>
 		<img className='image' style = {{  width : "15rem" , height : "15rem"}} src ={image} alt = {title}/>
 		<div className = "fw-bold">{title}</div>
 		<div className = "mt-3"> <button> Price:${price} </button> </div>
-		<Link  to = {`/product/${id}`}>
-		<button className = "btn btn-primary mt-3">Buy Now </button>
 		</Link>
+
+		<Link to={`/cart`}>
+		<Button onClick= {() => dispatch(getAddItem(product))} className='m-2'>Buy Now</Button>
+		</Link>
+		
 	</div>
 	);
 

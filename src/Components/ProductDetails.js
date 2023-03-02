@@ -9,7 +9,7 @@ import {Link} from 'react-router-dom';
 
 
 export const ProductDetails = () => {
-const {id}  =useParams();
+const {id}  = useParams();
 const dispatch = useDispatch();
 const fetchSelectedProduct = async() => { 
 const response = await fetch(`https://fakestoreapi.com/products/${id}`)
@@ -39,9 +39,8 @@ return(
 		<div className = "mt-5 fw-bold">{title}</div>
 		<div className = "pe-none mt-2"> <button> Price:${price} </button> </div>
 		<div> ${description}</div>
+		<Link to = {`ProductListing`}>
 		<button className="btn btn-primary mx-2 my-5"  onClick= {() => dispatch(getAddItem(product))}> Add To Cart </button>
-		<Link to = {`/Cart`}>
-		<button className = "btn btn-primary mx-2 my-5"> Go To Cart</button>
 		</Link>
 	</div>
 </div>

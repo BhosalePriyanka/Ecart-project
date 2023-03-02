@@ -6,6 +6,7 @@ import { MdDelete} from "react-icons/md";
 import { AiFillPlusCircle,AiFillMinusCircle } from "react-icons/ai";
 import {Link} from 'react-router-dom';
 import Table from 'react-bootstrap/Table';
+import { Button } from 'react-bootstrap';
 
 function Cart(){
 const item= useSelector(state => state.item);
@@ -28,7 +29,7 @@ console.log(item.quantity * price)
 
 return(
 <>
-<div className = "col-lg-6 col-sm-12 mx-auto mt-5 p-0 shadow" >
+<div className = "col-lg-8 col-sm-12 mx-auto mt-5 p-0 shadow">
 <Table striped bordered hover responsive>
 <thead>
 <tr>
@@ -43,7 +44,7 @@ return(
 
 <tbody key = {item.id}>
 <tr>
-<td  className = "col-2"><img className = "image-fluid" style={{height:"200px"}} src ={image} alt = {title} /></td>
+<td  className = "col-2"><img style={{height:"200px" , width:"200px"}} src ={image} alt = {title} /></td>
 <td className = "col-2"> {title} </td>
 <td className = "col-2"> ${price} </td>
 <td className = "col-2">
@@ -63,19 +64,24 @@ return(
 );
 })}
 
-{totalAmount > 0 ? <div className="chekOut"> 
-<br/>
-<button className = "btn btn-primary pe-none" >Total Amount to Pay : ${totalAmount.toFixed(2)}</button>
-<br/><br/>
 
+
+
+{totalAmount > 0 ? <div className="chekOut"> 
+
+<Link to={`/ProductListing`}> <Button>Continue Shopping</Button> </Link>
+<br/>
+<Button className = "m-2" >Total Amount to Pay : ${totalAmount.toFixed(2)}</Button>
+<br/>
 {userDetails ? 
 
 <Link to = {`/Payment`}>
-<button className="btn btn-success" onClick={() => dispatch(paymentdoneCart(item))}> Proceed To Checkout</button>
+<Button className="m-2" onClick={() => dispatch(paymentdoneCart(item))}> Proceed To Checkout</Button>
+<br/>
 </Link>
 :
 <Link to = {`/Login`}>
-<button className="btn btn-success"> Proceed To Checkout</button>
+<Button className="btn btn-success m-2"> Proceed To Checkout</Button>
 </Link>
 }
 </div>
