@@ -8,7 +8,6 @@ import {useNavigate, Link} from 'react-router-dom';
 
 export const NavBar = () => {
 const item = useSelector(state => state.item);
-
 const userDetails = JSON.parse(localStorage.getItem("user"));
 const navigate = useNavigate();
 function logout(){
@@ -28,6 +27,7 @@ return(
         <Nav.Link className = "mx-2 " as = {Link} to = {`./Cart`}> <AiOutlineShoppingCart/>{item.length} </Nav.Link>
     { userDetails ? 
         <NavDropdown title={ userDetails && userDetails.username} id="basic-nav-dropdown">
+         
         <NavDropdown.Item onClick = {logout}>Logout</NavDropdown.Item>
         </NavDropdown>
           : 

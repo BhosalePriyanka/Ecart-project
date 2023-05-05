@@ -52,14 +52,14 @@ event.preventDefault();
 setError(Validate(state ,false));
 const error = Validate(state);
 
-const response = await fetch('http://localhost:3000/users')
+const response = await fetch('https://json-ecommerce-bn16.onrender.com/users')
 const jsonData =  await response.json();
 const filteremail = jsonData.filter(jsonData=> {return jsonData.email === state.email});
 
 if(filteremail && filteremail.length > 0 ){
 	setUser(true);
 }
-
+	
 
 
 if(error.isValid && filteremail && filteremail.length === 0 ){

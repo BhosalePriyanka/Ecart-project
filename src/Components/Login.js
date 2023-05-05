@@ -24,7 +24,7 @@ const handleSubmit = async(event) => {
 event.preventDefault();
 setError(Validate(state, true));
 
-const response = await fetch('http://localhost:3000/users')
+const response = await fetch('https://json-ecommerce-bn16.onrender.com/users')
 const jsonData = await response.json();
 
 const filterUser = jsonData.filter(jsonData=> { return jsonData.username === state.username && jsonData.password === state.password});

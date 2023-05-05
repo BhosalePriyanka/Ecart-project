@@ -6,15 +6,22 @@ import { memo } from "react";
 import {selectedProduct , getAddItem, removepriviousProduct} from '../Redux/Action/ProductAction';
 import './Main.css';
 import {Link} from 'react-router-dom';
+import { useErrorHandler } from 'react-error-boundary';
 
 
 export const ProductDetails = () => {
+const handleError = useErrorHandler()
 const {id}  = useParams();
 const dispatch = useDispatch();
 const fetchSelectedProduct = async() => { 
+try{
 const response = await fetch(`https://fakestoreapi.com/products/${id}`)
 const jsonData = await response.json();
 dispatch(selectedProduct(jsonData));
+}
+catch(error){
+handleError(error)
+}
 }
 
 

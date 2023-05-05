@@ -1,13 +1,11 @@
 
 import './App.css';
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './Components/NavBar';
 import Home from './Components/Home';
 import Footer from './Components/Footer';
 import React from 'react';
-
 import ProductDetails from './Components/ProductDetails';
 import Cart from './Components/Cart';
 import Login from './Components/Login';

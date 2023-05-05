@@ -13,7 +13,7 @@ const item= useSelector(state => state.item);
 const userDetails = localStorage.getItem("user");
 let totalAmount = 0;
 const dispatch = useDispatch();
-
+console.log(item)
 return( 
 
 <div className ="container">
@@ -75,13 +75,13 @@ return(
 <br/>
 {userDetails ? 
 
-<Link to = {`/Payment`}>
-<Button className="m-2" onClick={() => dispatch(paymentdoneCart(item))}> Proceed To Checkout</Button>
+<Link to = {`/Payment`} state = {item}>
+<Button className="m-2" onClick={() => dispatch(paymentdoneCart(item))}  > Proceed To Checkout</Button>
 <br/>
 </Link>
 :
 <Link to = {`/Login`}>
-<Button className="btn btn-success m-2"> Proceed To Checkout</Button>
+<Button className="btn btn-success m-2" > Proceed To Checkout</Button>
 </Link>
 }
 </div>

@@ -1,3 +1,4 @@
+import { SliderThumb } from '@mui/material';
 import { ActionTypes } from '../Constant/ActionTypes.js';
 const initialState = {
 	products : []
@@ -37,7 +38,8 @@ switch(action.type){
 	    case ActionTypes.ADDITEM:
 		const  exist = state.filter((item) => item.id  === action.payload.id);
  		if (exist <= 1){
- 		return   alert("Added in cart"),
+			
+ 		return alert("Added in cart"),
 		[... state ,  action.payload ]
  		}
 		else{
@@ -45,7 +47,9 @@ switch(action.type){
 		}
 		case ActionTypes.PAYMENTDONE:
 			{
-				return state = []
+				return alert("Payment Done"),
+				state = []
+				
 			}
 }
 
