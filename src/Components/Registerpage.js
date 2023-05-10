@@ -52,7 +52,7 @@ event.preventDefault();
 setError(Validate(state ,false));
 const error = Validate(state);
 
-const response = await fetch('https://json-ecommerce-bn16.onrender.com/users')
+const response = await fetch('https://ecommerce-json-data.onrender.com/users')
 const jsonData =  await response.json();
 const filteremail = jsonData.filter(jsonData=> {return jsonData.email === state.email});
 
@@ -63,7 +63,7 @@ if(filteremail && filteremail.length > 0 ){
 
 
 if(error.isValid && filteremail && filteremail.length === 0 ){
-	fetch('https://my-json-server.typicode.com/BhosalePriyanka/Ecart-json/users',{
+	fetch('https://ecommerce-json-data.onrender.com/users',{
             method:"POST",
             mode: 'cors',
             headers: {
